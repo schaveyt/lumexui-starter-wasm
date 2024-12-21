@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "buildcss": "postcss wwwroot/css/app.css -o wwwroot/css/app.min.css",
+    "watchcss": "npx tailwindcss -i wwwroot/css/app.css -o wwwroot/css/app.min.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "3.4.16"
+  }
+}

@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+
+<LumexThemeProvider />
+
+<div class="antialiased bg-gray-50 dark:bg-gray-900 h-screen flex flex-col">
+
+    <div class="text-gray-800 dark:text-gray-100 flex flex-col justify-between flex-auto overflow-y-auto">
+  
+        <section class="border flex-auto flex overflow-y-auto">
+  
+            <aside class="h-full fixed relative overflow-auto w-96 z-40  left-0 top-0  bg-white border-r border-gray-300 dark:bg-gray-800 dark:border-gray-700">
+                <NavMenu />
+            </aside>
+  
+            <main class="p-4 text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-900 overflow-auto w-full">
+                @Body
+            </main>
+  
+        </section>
+  
+        <Footer/>
+  
+    </div>
+
+</div>
