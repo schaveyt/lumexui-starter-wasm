@@ -1,6 +1,6 @@
-# lumexui-starter-wasm
+# LumexUi Starter for WASM
 
-This is a starter template for a Blazor WebAssembly application using LumexUI.
+This is a starter template for a Blazor WebAssembly application using [LumexUI](https://lumexui.org/).
 
 ## Getting Started
 
@@ -13,20 +13,28 @@ To run this project, you'll need to have the following installed:
 Once you have those installed, run the following commands:
 
 ```bash
-npm install
-dotnet restore
-dotnet build
+cd src/WebApp.Client
+npm install # installs tailwindcss utils
+dotnet restore # restores dependencies
 ```
-
-This will restore the dependencies and build the project.
 
 ## Running the Application
 
-To run the application, use the following command:
+Development consists of two `parallel` command-line tools running simultaneously
 
-```bash
-dotnet run
-```
+1. tailwindcss minification
 
-This will start the application in development mode. Open your browser to `http://localhost:5000` to view it.
+    ```sh
+    cd src/WebApp.Client
+    npm run watchcss
+    ```
+
+2. flask web server
+
+    ```sh
+    cd src/WebApp.Client
+    dotnet watch
+    ```
+
+This will start the application in development mode. Open your browser to `http://localhost:5072` to view it.
 
